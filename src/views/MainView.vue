@@ -1,14 +1,11 @@
 <template>
-  <div id="app">
-    <Navbar />
-    <router-view/>
-  </div>
+  <h6>Home</h6>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 
 export default Vue.extend({
-  name: 'App',
+  name: 'MainView',
 });
 </script>
