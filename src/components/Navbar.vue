@@ -4,7 +4,9 @@
       <h6>Flexbox Visualizer</h6>
     </template>
     <v-nav-region position="left">
-      <v-navbar-item blank href="https://github.com/FlorianWoelki/flex-vis">GitHub</v-navbar-item>
+      <v-navbar-item blank href="https://github.com/FlorianWoelki/flex-vis">
+        <i class="fab fa-github-alt fa-lg"></i>
+      </v-navbar-item>
     </v-nav-region>
     <v-nav-region position="center">
       <v-nav-dropdown animated>
