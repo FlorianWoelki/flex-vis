@@ -4,7 +4,15 @@
       <h6>Flexbox Visualizer</h6>
     </template>
     <v-nav-region position="left">
-      <v-navbar-item>GitHub</v-navbar-item>
+      <v-navbar-item blank href="https://github.com/FlorianWoelki/flex-vis">GitHub</v-navbar-item>
+    </v-nav-region>
+    <v-nav-region position="center">
+      <v-nav-dropdown animated>
+        <template v-slot:title>Flex Options</template>
+        <v-nav-dropdown-item v-for="item in flexOptions" :key="item">
+          {{ item }}
+        </v-nav-dropdown-item>
+      </v-nav-dropdown>
     </v-nav-region>
     <v-nav-region position="right">
       <div class="custom-nav-item">
@@ -19,6 +27,15 @@ import Vue from 'vue';
 
 export default Vue.extend({
   name: 'Navbar',
+
+  data() {
+    return {
+      flexOptions: [
+        'order', 'direction', 'grow', 'wrap', 'shrink',
+        'justify-content', 'flex', 'align-self', 'align-items', 'align-content',
+      ],
+    };
+  },
 });
 </script>
 
