@@ -7,8 +7,6 @@
       <v-navbar-item blank href="https://github.com/FlorianWoelki/flex-vis">
         <i class="fab fa-github-alt fa-lg"></i>
       </v-navbar-item>
-    </v-nav-region>
-    <v-nav-region position="center">
       <v-nav-dropdown animated>
         <template v-slot:title>Flex Options</template>
         <v-nav-dropdown-item v-for="item in flexOptions" :key="item">
