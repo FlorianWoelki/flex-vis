@@ -17,3 +17,12 @@ export default Vue.extend({
   },
 });
 </script>
+
+<style lang="scss">
+$base-text-color: #434850;
+
+h1 {
+  color: $base-text-color;
+}
+
+</style>
