@@ -1,6 +1,7 @@
 <template>
   <section id="main-view">
     <v-container class="u-text-center">
+      <img src="@/assets/header-logo.png" alt="header-logo">
       <h1>Flexbox Visualizer</h1>
       <h5 class="font-thin">Carefully designed CSS flexbox visualizer for learning purposes.</h5>
       <v-space large></v-space>
