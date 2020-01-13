@@ -8,6 +8,8 @@
         <span class="font-bold">Get Started</span>
         <i class="fas fa-arrow-right fa-lg"></i>
       </v-btn>
+      <v-space></v-space>
+      <a class="github-button" href="https://github.com/florianwoelki/flex-vis" data-size="large" data-show-count="true" aria-label="Star florianwoelki/flex-vis on GitHub">Star</a>
     </v-container>
   </section>
 </template>
