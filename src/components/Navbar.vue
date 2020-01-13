@@ -18,7 +18,7 @@
     </v-nav-region>
     <v-nav-region position="right">
       <div class="custom-nav-item">
-        <v-toggler id="dark-mode-checkbox" dataCheckIcon="🌙" dataUncheckIcon="🌤"></v-toggler>
+        <v-toggler id="dark-mode-checkbox" dataCheckIcon="🌝" dataUncheckIcon="🌞"></v-toggler>
       </div>
     </v-nav-region>
   </v-navbar>
@@ -52,6 +52,24 @@ export default Vue.extend({
   #dark-mode-checkbox {
     text-align: initial;
     padding-left: 0;
+  }
+
+  .form-ext-toggle__toggler {
+    width: 3.5rem;
+    height: 1.7rem;
+    font-size: 11px;
+    background-color: #4d4d4d !important;
+    border-color: #4d4d4d !important;
+
+    i {
+      font-style: initial;
+
+      &:before {
+        font-size: 15px;
+        line-height: 22px;
+        width: 70%;
+      }
+    }
   }
 }
 </style>
