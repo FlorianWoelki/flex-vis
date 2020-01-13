@@ -18,7 +18,7 @@
     </v-nav-region>
     <v-nav-region position="right">
       <div class="custom-nav-item">
-        <v-toggler id="dark-mode-checkbox" dataCheckIcon="🌤" dataUncheckIcon="🌙"></v-toggler>
+        <v-toggler id="dark-mode-checkbox" dataCheckIcon="🌙" dataUncheckIcon="🌤"></v-toggler>
       </div>
     </v-nav-region>
   </v-navbar>
