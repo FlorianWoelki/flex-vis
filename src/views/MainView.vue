@@ -4,7 +4,7 @@
       <h1>Flexbox Visualizer</h1>
       <h5 class="font-thin">Carefully designed CSS flexbox visualizer for learning purposes.</h5>
       <v-space large></v-space>
-      <v-btn color="link" size="large">
+      <v-btn class="u-center" color="link" size="large">
         <span class="font-bold">Get Started</span>
         <i class="fas fa-arrow-right fa-lg"></i>
       </v-btn>
