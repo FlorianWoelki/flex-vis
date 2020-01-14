@@ -52,6 +52,16 @@ export default Vue.extend({
     padding-left: 0;
   }
 
+  .form-ext-toggle input[type=checkbox]:checked+.form-ext-toggle__toggler i {
+    &::after {
+      left: calc(100% - 25px);
+      background-color: #D5D7DC;
+    }
+    &::before {
+      right: 5px;
+    }
+  }
+
   .form-ext-toggle__toggler {
     width: 3.5rem;
     height: 1.7rem;
@@ -62,7 +72,14 @@ export default Vue.extend({
     i {
       font-style: initial;
 
+      &:after {
+        width: 24px;
+        height: 24px;
+        left: 1px;
+      }
+
       &:before {
+        padding-right: 3px;
         font-size: 15px;
         line-height: 22px;
         width: 70%;
