@@ -1,5 +1,5 @@
 <template>
-  <v-navbar>
+  <v-navbar fixed>
     <template v-slot:brandTitle>
       <h6>Flexbox Visualizer</h6>
     </template>
