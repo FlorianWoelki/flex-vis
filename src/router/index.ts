@@ -1,14 +1,14 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import MainView from '../views/MainView.vue';
+import Hero from '../views/Hero.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    name: 'mainView',
-    component: MainView,
+    name: 'hero',
+    component: Hero,
   },
 ];
 

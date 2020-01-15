@@ -1,5 +1,5 @@
 <template>
-  <section id="main-view">
+  <section id="hero-view">
     <v-container class="u-text-center">
       <img style="max-height: 250px;" src="@/assets/header-logo.png" alt="header-logo">
       <h1>Flexbox Visualizer</h1>
@@ -19,12 +19,12 @@
 import Vue from 'vue';
 
 export default Vue.extend({
-  name: 'MainView',
+  name: 'Hero',
 });
 </script>
 
 <style lang="scss">
-#main-view {
+#hero-view {
   button i {
     margin-left: 10px;
   }
