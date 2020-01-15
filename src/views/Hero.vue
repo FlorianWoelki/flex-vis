@@ -1,5 +1,6 @@
 <template>
   <section id="hero-view">
+    <v-space large></v-space>
     <v-parallax disableParallax fullscreen customBody>
       <v-container class="u-text-center">
         <img style="max-height: 250px;" src="@/assets/header-logo.png" alt="header-logo">
