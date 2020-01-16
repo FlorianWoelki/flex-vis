@@ -58,7 +58,7 @@ export default Vue.extend({
       background-color: #D5D7DC;
     }
     &::before {
-      right: 5px;
+      right: 1px;
     }
   }
 
@@ -82,7 +82,7 @@ export default Vue.extend({
         padding-right: 3px;
         font-size: 15px;
         line-height: 22px;
-        width: 70%;
+        width: 77%;
       }
     }
   }
