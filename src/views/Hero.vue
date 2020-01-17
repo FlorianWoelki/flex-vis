@@ -1,9 +1,8 @@
 <template>
   <section id="hero-view">
-    <v-space v-for="i in 3" :key="i" large></v-space>
-    <v-parallax disableParallax fullscreen customBody>
+    <v-parallax disableParallax fullscreen>
       <v-container class="u-text-center">
-        <img style="max-height: 250px;" src="@/assets/header-logo.png" alt="header-logo">
+        <img style="max-height: 350px;" src="@/assets/header-logo.png" alt="header-logo">
         <h1>Flexbox Visualizer</h1>
         <h5 class="font-thin">Carefully designed CSS flexbox visualizer for learning purposes.</h5>
         <v-space large></v-space>
