@@ -14,6 +14,6 @@ git init
 git add -A
 git commit -m 'Deploy'
 
-git push -f git@github.com:florianwoelki/flex-vis.git master:gh-pages
+git push -f https://github.com/FlorianWoelki/flex-vis master:gh-pages
 
 cd -
