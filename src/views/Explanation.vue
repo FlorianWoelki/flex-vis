@@ -21,7 +21,7 @@ export default Vue.extend({
 
 <style lang="scss">
 #explanation-view {
-  padding: 50px;
+  padding: 75px;
   background-color: rgb(94, 92, 199);
 }
 </style>
