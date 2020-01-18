@@ -58,7 +58,7 @@ export default Vue.extend({
       background-color: #D5D7DC;
     }
     &::before {
-      right: 1px;
+      right: 3px;
     }
   }
 
