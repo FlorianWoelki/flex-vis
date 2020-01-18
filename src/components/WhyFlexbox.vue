@@ -1,6 +1,5 @@
 <template>
   <section id="why-learning-flexbox">
-    <v-space xlarge></v-space>
     <v-container>
       <h3 class="u-text-center">Why learning Flexbox?</h3>
     </v-container>

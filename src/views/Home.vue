@@ -2,6 +2,7 @@
   <section id="home">
     <Hero></Hero>
     <Explanation></Explanation>
+    <v-space xlarge></v-space>
     <WhyFlexbox></WhyFlexbox>
   </section>
 </template>
