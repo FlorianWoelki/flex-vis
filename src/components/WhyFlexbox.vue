@@ -8,17 +8,17 @@
     <v-container >
       <v-row>
         <v-col class="u-center" c="4">
-          <WhyFlexboxBox title="Better lay out" icon="university">
+          <WhyFlexboxBox title="Better lay out" icon="ruler">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </WhyFlexboxBox>
         </v-col>
         <v-col class="u-center" c="4">
-          <WhyFlexboxBox title="More flexible" icon="university">
+          <WhyFlexboxBox title="More flexible" icon="align-center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </WhyFlexboxBox>
         </v-col>
         <v-col class="u-center" c="4">
-          <WhyFlexboxBox title="Modern tech" icon="university">
+          <WhyFlexboxBox title="Modern tech" icon="microchip">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </WhyFlexboxBox>
         </v-col>
