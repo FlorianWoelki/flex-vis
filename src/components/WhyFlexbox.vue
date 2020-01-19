@@ -8,25 +8,19 @@
     <v-container >
       <v-row>
         <v-col class="u-center" c="4">
-          <v-card class="u-text-center">
-            <i class="fas fa-university fa-5x"></i>
-            <h5>Better lay out</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </v-card>
+          <WhyFlexboxBox title="Better lay out" icon="university">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </WhyFlexboxBox>
         </v-col>
         <v-col class="u-center" c="4">
-          <v-card class="u-text-center">
-            <i class="fas fa-university fa-5x"></i>
-            <h5>More flexible</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </v-card>
+          <WhyFlexboxBox title="More flexible" icon="university">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </WhyFlexboxBox>
         </v-col>
         <v-col class="u-center" c="4">
-          <v-card class="u-text-center">
-            <i class="fas fa-university fa-5x"></i>
-            <h5>Modern technology</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </v-card>
+          <WhyFlexboxBox title="Modern technology" icon="university">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </WhyFlexboxBox>
         </v-col>
       </v-row>
     </v-container>
@@ -35,9 +29,14 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import WhyFlexboxBox from './WhyFlexboxBox.vue';
 
 export default Vue.extend({
   name: 'WhyFlexbox',
+
+  components: {
+    WhyFlexboxBox,
+  },
 });
 </script>
 
