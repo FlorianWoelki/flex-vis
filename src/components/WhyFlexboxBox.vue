@@ -1,5 +1,5 @@
 <template>
-  <v-card class="u-text-center">
+  <v-card equalHeight class="u-text-center">
     <i :class="`fas fa-${icon} fa-5x`"></i>
     <h5>{{ title }}</h5>
     <p>

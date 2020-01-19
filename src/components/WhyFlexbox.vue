@@ -18,7 +18,7 @@
           </WhyFlexboxBox>
         </v-col>
         <v-col class="u-center" c="4">
-          <WhyFlexboxBox title="Modern technology" icon="university">
+          <WhyFlexboxBox title="Modern tech" icon="university">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </WhyFlexboxBox>
         </v-col>
