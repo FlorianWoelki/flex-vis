@@ -10,37 +10,14 @@
         <v-col class="u-center" c="4">
           <v-card class="u-text-center">
             <i class="fas fa-university fa-5x"></i>
-            <h5>Modern technology</h5>
+            <h5>Better lay out</h5>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </v-card>
         </v-col>
         <v-col class="u-center" c="4">
           <v-card class="u-text-center">
             <i class="fas fa-university fa-5x"></i>
-            <h5>Modern technology</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </v-card>
-        </v-col>
-        <v-col class="u-center" c="4">
-          <v-card class="u-text-center">
-            <i class="fas fa-university fa-5x"></i>
-            <h5>Modern technology</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </v-card>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col class="u-center" c="4">
-          <v-card class="u-text-center">
-            <i class="fas fa-university fa-5x"></i>
-            <h5>Modern technology</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </v-card>
-        </v-col>
-        <v-col class="u-center" c="4">
-          <v-card class="u-text-center">
-            <i class="fas fa-university fa-5x"></i>
-            <h5>Modern technology</h5>
+            <h5>More flexible</h5>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </v-card>
         </v-col>
