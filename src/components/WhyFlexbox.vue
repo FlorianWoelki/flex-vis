@@ -9,17 +9,17 @@
       <v-row>
         <v-col class="u-center" c="4">
           <WhyFlexboxBox title="Better lay out" icon="ruler">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            With flexbox you can easily layout your modern webapp.
           </WhyFlexboxBox>
         </v-col>
         <v-col class="u-center" c="4">
           <WhyFlexboxBox title="More flexible" icon="align-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Flexbox is just a little bit of code, which is really flexible.
           </WhyFlexboxBox>
         </v-col>
         <v-col class="u-center" c="4">
           <WhyFlexboxBox title="Modern tech" icon="microchip">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Flexbox is the easiest way to go, when learning responsive design.
           </WhyFlexboxBox>
         </v-col>
       </v-row>
