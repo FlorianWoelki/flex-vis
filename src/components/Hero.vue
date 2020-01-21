@@ -2,7 +2,7 @@
   <section id="hero-view">
     <v-parallax disableParallax fullscreen>
       <v-container class="u-text-center">
-        <img style="max-height: 300px;" src="@/assets/header-logo.png" alt="header-logo">
+        <img style="max-height: 200px;" src="@/assets/header-logo.png" alt="header-logo">
         <h1>Flexbox Visualizer</h1>
         <h5 class="font-thin">Carefully designed CSS flexbox visualizer for learning purposes.</h5>
         <v-space large></v-space>
