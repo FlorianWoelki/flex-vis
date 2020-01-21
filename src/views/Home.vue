@@ -5,6 +5,7 @@
     <Explanation></Explanation>
     <v-space xlarge></v-space>
     <WhyFlexbox></WhyFlexbox>
+    <v-space></v-space>
     <Footer></Footer>
   </section>
 </template>
