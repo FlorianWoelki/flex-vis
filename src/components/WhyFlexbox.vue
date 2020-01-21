@@ -39,11 +39,3 @@ export default Vue.extend({
   },
 });
 </script>
-
-<style lang="scss">
-#why-learning-flexbox {
-  .card {
-    padding: 25px;
-  }
-}
-</style>

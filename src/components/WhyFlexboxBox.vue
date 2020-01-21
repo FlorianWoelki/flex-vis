@@ -21,3 +21,13 @@ export default class WhyFlexboxBox extends Vue {
   public icon!: string;
 }
 </script>
+
+<style lang="scss">
+.card {
+  padding: 25px;
+
+  h5, i {
+    color: rgb(94, 92, 199);
+  }
+}
+</style>
