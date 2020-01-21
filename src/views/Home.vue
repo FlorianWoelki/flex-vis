@@ -1,5 +1,6 @@
 <template>
   <section id="home">
+    <v-space large></v-space>
     <Hero></Hero>
     <Explanation></Explanation>
     <v-space xlarge></v-space>
