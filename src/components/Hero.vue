@@ -11,7 +11,7 @@
           <i class="fas fa-arrow-right fa-lg"></i>
         </v-btn>
         <v-space></v-space>
-        <a class="github-button" href="https://github.com/florianwoelki/flex-vis" data-size="large" data-show-count="true" aria-label="Star florianwoelki/flex-vis on GitHub">Star</a>
+        <iframe src="https://ghbtns.com/github-btn.html?user=florianwoelki&repo=flex-vis&type=star&count=true&size=large" frameborder="0" scrolling="0" width="115px" height="30px"></iframe>
       </v-container>
     </v-parallax>
   </section>
@@ -29,6 +29,11 @@ export default Vue.extend({
 #hero-view {
   button i {
     margin-left: 10px;
+  }
+
+  iframe {
+    border: none;
+    box-shadow: none;
   }
 }
 </style>
