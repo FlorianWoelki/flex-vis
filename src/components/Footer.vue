@@ -1,7 +1,7 @@
 <template>
   <v-footer title="Flexbox Visualizer" subtitle="© 2020 Florian Woelki">
     <p>
-      Built with <i class="fas fa-heart animated pulse"></i> with <a href="https://github.com/FlorianWoelki/vue-cirrus/">Vue-Cirrus</a>
+      Built with <i class="fas fa-heart animated pulse"></i> with <a target="_blank" href="https://github.com/FlorianWoelki/vue-cirrus/">Vue-Cirrus</a>
     </p>
   </v-footer>
 </template>
