@@ -16,7 +16,7 @@
     </v-nav-region>
     <v-nav-region position="right">
       <div class="custom-nav-item">
-        <v-toggler id="dark-mode-checkbox" dataCheckIcon="🌝" dataUncheckIcon="🌞"></v-toggler>
+        <v-toggler id="dark-mode-checkbox" dataCheckIcon="DARK" dataUncheckIcon="LIGHT"></v-toggler>
       </div>
     </v-nav-region>
   </v-navbar>
@@ -52,36 +52,50 @@ export default Vue.extend({
     padding-left: 0;
   }
 
-  .form-ext-toggle input[type=checkbox]:checked+.form-ext-toggle__toggler i {
-    &::after {
-      left: calc(100% - 25px);
-      background-color: #D5D7DC;
+  .form-ext-toggle {
+    font-weight: bold;
+
+    .form-ext-toggle__toggler {
+      background-color: #4d4d4d;
+      border-color: #4d4d4d;
     }
-    &::before {
-      right: 3px;
+
+    input[type=checkbox]:checked+.form-ext-toggle__toggler {
+      background-color: #f1f1f1;
+      border-color: #f1f1f1;
+
+      i {
+        &::after {
+          left: calc(100% - 25px);
+        }
+        &::before {
+          color: #4d4d4d !important;
+          right: 3px;
+        }
+      }
     }
   }
 
   .form-ext-toggle__toggler {
-    width: 3.5rem;
+    width: 5.5rem;
     height: 1.7rem;
     font-size: 11px;
-    background-color: #4d4d4d !important;
-    border-color: #4d4d4d !important;
 
     i {
       font-style: initial;
 
       &:after {
+        color: white;
         width: 24px;
         height: 24px;
         left: 1px;
       }
 
       &:before {
+        color: white;
         padding-right: 3px;
         font-size: 15px;
-        line-height: 22px;
+        line-height: 23px;
         width: 77%;
       }
     }
