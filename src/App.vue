@@ -19,7 +19,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-$base-text-color: #434850;
+@import './scss/_variables.scss';
 
 h1 {
   color: $base-text-color;

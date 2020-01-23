@@ -20,8 +20,10 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
+@import '@/scss/_variables.scss';
+
 #explanation-view {
   padding: 75px;
-  background-color: rgb(94, 92, 199);
+  background-color: $main-color;
 }
 </style>

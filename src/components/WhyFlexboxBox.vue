@@ -23,11 +23,13 @@ export default class WhyFlexboxBox extends Vue {
 </script>
 
 <style lang="scss">
+@import '@/scss/_variables.scss';
+
 .card {
   padding: 25px;
 
   h5, i {
-    color: rgb(94, 92, 199);
+    color: $main-color;
   }
 }
 </style>

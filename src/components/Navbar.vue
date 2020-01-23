@@ -40,6 +40,8 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
+@import '@/scss/_variables.scss';
+
 .header {
   .custom-nav-item {
     display: flex;
@@ -56,13 +58,13 @@ export default Vue.extend({
     font-weight: bold;
 
     .form-ext-toggle__toggler {
-      background-color: #4d4d4d;
-      border-color: #4d4d4d;
+      background-color: $darkmode-color;
+      border-color: $darkmode-color;
     }
 
     input[type=checkbox]:checked+.form-ext-toggle__toggler {
-      background-color: #f1f1f1;
-      border-color: #f1f1f1;
+      background-color: $lightmode-color;
+      border-color: $lightmode-color;
 
       i {
         &::after {
