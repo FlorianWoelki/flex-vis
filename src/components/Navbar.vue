@@ -9,7 +9,11 @@
       </v-navbar-item>
       <v-nav-dropdown animated>
         <template v-slot:title>Flex Options</template>
-        <v-nav-dropdown-item v-for="item in flexOptions" :key="item">
+        <v-nav-dropdown-item
+          v-for="item in flexOptions"
+          :key="item"
+          :href="`#/${flexOptionsRoutes(item)}`"
+        >
           {{ item }}
         </v-nav-dropdown-item>
       </v-nav-dropdown>
@@ -35,6 +39,12 @@ export default Vue.extend({
         'justify-content', 'flex', 'align-self', 'align-items', 'align-content',
       ],
     };
+  },
+
+  methods: {
+    flexOptionsRoutes(flexOption: string): string {
+      return flexOption.replace('-', '');
+    },
   },
 });
 </script>
