@@ -28,7 +28,7 @@ export default class WhyFlexboxBox extends Vue {
 .card {
   padding: 25px;
 
-  h5, i {
+  i {
     color: $main-color;
   }
 }
