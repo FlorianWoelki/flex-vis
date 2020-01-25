@@ -15,6 +15,17 @@
         <div class="square"></div>
         <div class="square"></div>
       </div>
+
+      <v-space large></v-space>
+
+      <v-dropdown>
+        <template v-slot:button>
+          <v-btn dropdown color="link">
+            Alignments <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
+          </v-btn>
+        </template>
+        <v-dropdown-item>Normal</v-dropdown-item>
+      </v-dropdown>
     </v-container>
   </section>
 </template>
