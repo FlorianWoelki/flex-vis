@@ -8,6 +8,13 @@
       <p class="definition">
         The <kbd>align-content</kbd> aligns the flex lines horizontally.
       </p>
+
+      <div class="showcase">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </div>
     </v-container>
   </section>
 </template>
@@ -21,9 +28,32 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
+@import '@/scss/_variables.scss';
+
 #align-content-showcase {
   .definition {
     font-size: 18px;
+  }
+
+  .showcase {
+    border: 0.05rem solid #ccc;
+    border-radius: 5px;
+    height: 450px;
+    -moz-box-shadow: inset 0 0 6px #333;
+    -webkit-box-shadow: inset 0 0 6px #333;
+    box-shadow: inset 0 0 6px #333;
+    padding: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+
+    .square {
+      background-color: $main-color;
+      border-radius: 5px;
+      height: 50px;
+      width: 50px;
+      border: 1px solid #333;
+    }
   }
 }
 </style>
