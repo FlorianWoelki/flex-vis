@@ -10,7 +10,7 @@
       <v-nav-dropdown animated>
         <template v-slot:title>Flex Options</template>
         <v-nav-dropdown-item
-          v-for="item in flexOptions"
+          v-for="item in flexOptionsSorted"
           :key="item"
           :href="`#/${flexOptionsRoutes(item)}`"
         >
@@ -39,6 +39,18 @@ export default Vue.extend({
         'justify-content', 'flex', 'align-self', 'align-items', 'align-content',
       ],
     };
+  },
+
+  computed: {
+    flexOptionsSorted(): string[] {
+      const sorted = this.flexOptions;
+      sorted.sort((a, b) => {
+        if (a > b) return 1;
+        if (b > a) return -1;
+        return 0;
+      });
+      return sorted;
+    },
   },
 
   methods: {
