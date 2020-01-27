@@ -9,7 +9,7 @@
         The <kbd>align-content</kbd> aligns the flex lines horizontally.
       </p>
 
-      <div class="showcase">
+      <div class="showcase" :style="applyStyles">
         <div class="square"></div>
         <div class="square"></div>
         <div class="square"></div>
@@ -24,7 +24,13 @@
             Alignments <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
           </v-btn>
         </template>
-        <v-dropdown-item>Normal</v-dropdown-item>
+        <v-dropdown-item
+          v-for="option in flexOptions"
+          :key="option"
+          @click="changeFlexOption(option)"
+        >
+          {{option}}
+        </v-dropdown-item>
       </v-dropdown>
     </v-container>
   </section>
@@ -32,10 +38,24 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { Component } from 'vue-property-decorator';
 
-export default Vue.extend({
-  name: 'AlignContent',
-});
+@Component({})
+export default class AlignContent extends Vue {
+  private flexOption: string = 'stretch';
+
+  private flexOptions: string[] = ['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch'];
+
+  changeFlexOption(option: string) {
+    this.flexOption = option;
+  }
+
+  get applyStyles(): Object {
+    return {
+      'align-content': this.flexOption,
+    };
+  }
+}
 </script>
 
 <style lang="scss">
@@ -56,7 +76,6 @@ export default Vue.extend({
     padding: 1rem;
     display: flex;
     flex-flow: row wrap;
-    align-content: center;
 
     .square {
       background-color: $main-color;
