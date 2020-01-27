@@ -49,7 +49,7 @@ export default Vue.extend({
   .showcase {
     border: 0.05rem solid #ccc;
     border-radius: 5px;
-    height: 450px;
+    height: 350px;
     -moz-box-shadow: inset 0 0 6px #333;
     -webkit-box-shadow: inset 0 0 6px #333;
     box-shadow: inset 0 0 6px #333;
