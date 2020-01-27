@@ -9,29 +9,32 @@
         The <kbd>align-content</kbd> aligns the flex lines horizontally.
       </p>
 
-      <div class="showcase" :style="applyStyles">
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-      </div>
-
-      <v-space large></v-space>
-
-      <v-dropdown>
-        <template v-slot:button>
-          <v-btn dropdown color="link">
-            Alignments <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
-          </v-btn>
-        </template>
-        <v-dropdown-item
-          v-for="option in flexOptions"
-          :key="option"
-          @click="changeFlexOption(option)"
-        >
-          {{option}}
-        </v-dropdown-item>
-      </v-dropdown>
+      <v-row>
+        <v-col c="4">
+          <div class="showcase" :style="applyStyles">
+            <div class="square">1</div>
+            <div class="square">2</div>
+            <div class="square">3</div>
+            <div class="square">4</div>
+          </div>
+        </v-col>
+        <v-col c="6" o="2">
+          <v-dropdown>
+            <template v-slot:button>
+              <v-btn dropdown color="link">
+                Alignments <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
+              </v-btn>
+            </template>
+            <v-dropdown-item
+              v-for="option in flexOptions"
+              :key="option"
+              @click="changeFlexOption(option)"
+            >
+              {{option}}
+            </v-dropdown-item>
+          </v-dropdown>
+        </v-col>
+      </v-row>
     </v-container>
   </section>
 </template>
@@ -68,21 +71,21 @@ export default class AlignContent extends Vue {
 
   .showcase {
     border: 0.05rem solid #ccc;
-    border-radius: 5px;
     height: 350px;
-    -moz-box-shadow: inset 0 0 6px #333;
-    -webkit-box-shadow: inset 0 0 6px #333;
-    box-shadow: inset 0 0 6px #333;
     padding: 1rem;
     display: flex;
     flex-flow: row wrap;
 
     .square {
       background-color: $main-color;
-      border-radius: 5px;
       height: 50px;
-      width: 50px;
-      border: 1px solid #333;
+      width: 132px;
+
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 22px;
     }
   }
 }
