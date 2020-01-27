@@ -1,7 +1,9 @@
 <template>
   <v-navbar fixed>
     <template v-slot:brandTitle>
+      <router-link to="/">
       <h6>Flexbox Visualizer</h6>
+      </router-link>
     </template>
     <v-nav-region position="left">
       <v-navbar-item blank href="https://github.com/FlorianWoelki/flex-vis">
