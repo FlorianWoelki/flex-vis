@@ -1,6 +1,6 @@
 <template>
   <section id="align-content-showcase">
-    <v-space xlarge></v-space>
+    <v-space></v-space>
     <v-space xlarge></v-space>
     <v-container>
       <h1>Align Content</h1>
@@ -33,6 +33,7 @@
               {{option}}
             </v-dropdown-item>
           </v-dropdown>
+          <p>Default: <kbd>stretch</kbd></p>
         </v-col>
       </v-row>
     </v-container>
