@@ -34,6 +34,10 @@
             </v-dropdown-item>
           </v-dropdown>
           <p>Default: <kbd>stretch</kbd></p>
+          <v-space xlarge></v-space>
+          <v-code lang="CSS">
+            {{ccsClasses}}
+          </v-code>
         </v-col>
       </v-row>
     </v-container>
@@ -58,6 +62,15 @@ export default class AlignContent extends Vue {
     return {
       'align-content': this.flexOption,
     };
+  }
+
+  get ccsClasses(): Object {
+    return `
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: ${this.flexOption};
+}`;
   }
 }
 </script>
