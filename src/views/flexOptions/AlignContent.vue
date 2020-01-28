@@ -66,6 +66,10 @@ export default class AlignContent extends Vue {
 @import '@/scss/_variables.scss';
 
 #align-content-showcase {
+  .divider {
+    margin-top: 0;
+  }
+
   .definition {
     font-size: 18px;
   }
