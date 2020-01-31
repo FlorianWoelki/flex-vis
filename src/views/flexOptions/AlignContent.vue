@@ -64,7 +64,7 @@ export default class AlignContent extends Vue {
     };
   }
 
-  get ccsClasses(): Object {
+  get ccsClasses(): string {
     return `
 .container {
   display: flex;
