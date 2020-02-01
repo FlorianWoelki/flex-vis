@@ -34,8 +34,16 @@
             </v-dropdown-item>
           </v-dropdown>
           <p>Default: <kbd>stretch</kbd></p>
-          <v-space xlarge></v-space>
-          {{cssClasses}}
+          <v-space large></v-space>
+          <pre>
+            <code class="code-showcase" data-lang="CSS">
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: {{this.flexOption}};
+  }
+            </code>
+          </pre>
         </v-col>
       </v-row>
     </v-container>
@@ -77,6 +85,18 @@ export default class AlignContent extends Vue {
 @import '@/scss/_variables.scss';
 
 #align-content-showcase {
+  code {
+    padding: 1.5rem 1.5rem 1rem !important;
+    background: #f6f8fa;
+  }
+
+  .code-showcase {
+    display: block;
+    color: #333;
+    overflow-x: auto;
+    max-height: 750px;
+  }
+
   .divider {
     margin-top: 0;
   }
