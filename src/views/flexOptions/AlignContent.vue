@@ -69,15 +69,6 @@ export default class AlignContent extends Vue {
       'align-content': this.flexOption,
     };
   }
-
-  get cssClasses(): string {
-    return `
-.container {
-  display: flex;
-  flex-flow: row wrap;
-  align-content: ${this.flexOption};
-}`;
-  }
 }
 </script>
 
