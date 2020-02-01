@@ -36,7 +36,7 @@
           <p>Default: <kbd>stretch</kbd></p>
           <v-space xlarge></v-space>
           <v-code lang="CSS">
-            {{ccsClasses}}
+            {{cssClasses}}
           </v-code>
         </v-col>
       </v-row>
@@ -64,7 +64,7 @@ export default class AlignContent extends Vue {
     };
   }
 
-  get ccsClasses(): string {
+  get cssClasses(): string {
     return `
 .container {
   display: flex;
