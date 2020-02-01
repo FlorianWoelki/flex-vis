@@ -35,9 +35,7 @@
           </v-dropdown>
           <p>Default: <kbd>stretch</kbd></p>
           <v-space xlarge></v-space>
-          <v-code lang="CSS">
-            {{cssClasses}}
-          </v-code>
+          {{cssClasses}}
         </v-col>
       </v-row>
     </v-container>
