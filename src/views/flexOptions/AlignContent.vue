@@ -88,15 +88,15 @@ export default class AlignContent extends Vue {
     max-height: 750px;
 
     .css-key {
-      color: #5c82a3;
+      color: $css-key-color;
     }
 
     .css-value {
-      color: #df5000;
+      color: $css-value-color;
     }
 
     .css-class {
-      color: #8f7a34;
+      color: $css-class-color;
     }
   }
 
