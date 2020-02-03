@@ -37,11 +37,11 @@
           <v-space large></v-space>
           <pre>
             <code class="code-showcase" data-lang="CSS">
-  .container {
-    display: flex;
-    flex-flow: row wrap;
-    align-content: {{this.flexOption}};
-  }
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: {{this.flexOption}};
+}
             </code>
           </pre>
         </v-col>
