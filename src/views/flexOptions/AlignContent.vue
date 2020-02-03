@@ -37,10 +37,10 @@
           <v-space large></v-space>
           <pre>
             <code class="code-showcase" data-lang="CSS">
-.container {
-  display: flex;
-  flex-flow: row wrap;
-  align-content: {{this.flexOption}};
+<span class="css-class">.container</span> {
+  <span class="css-key">display</span>: <span class="css-value">flex</span>;
+  <span class="css-key">flex-flow</span>: <span class="css-value">row wrap</span>;
+  <span class="css-key">align-content</span>: <span class="css-value">{{this.flexOption}}</span>;
 }
             </code>
           </pre>
@@ -86,6 +86,18 @@ export default class AlignContent extends Vue {
     color: #333;
     overflow-x: auto;
     max-height: 750px;
+
+    .css-key {
+      color: #5c82a3;
+    }
+
+    .css-value {
+      color: #df5000;
+    }
+
+    .css-class {
+      color: #8f7a34;
+    }
   }
 
   .divider {
