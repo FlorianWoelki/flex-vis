@@ -25,15 +25,15 @@ export default class CodeShowcase extends Vue {
 @import '@/scss/_variables.scss';
 
 code {
-  &.code-showcase {
-    padding: 1.5rem 1.5rem 1rem !important;
-  }
-
   background: #f6f8fa;
   display: block;
   color: #333;
   overflow-x: auto;
   max-height: 750px;
+
+  &.code-showcase {
+    padding: 1.5rem 1.5rem 1rem !important;
+  }
 
   .css-key {
     color: $css-key-color;
