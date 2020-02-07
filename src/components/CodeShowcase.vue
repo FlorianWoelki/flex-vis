@@ -1,10 +1,11 @@
 <template>
+  <!-- eslint-disable-->
   <pre>
     <code class="code-showcase" data-lang="CSS">
 <span class="css-class">.container</span> {
   <span class="css-key">display</span>: <span class="css-value">flex</span>;
-  <span class="css-key">flex-flow</span>: <span class="css-value">row wrap</span>;
-  <span class="css-key">align-content</span>: <span class="css-value">{{this.flexOption}}</span>;
+  <slot></slot>
+  <span class="css-key">{{this.flexAttribute}}</span>: <span class="css-value">{{this.flexOption}}</span>;
 }
     </code>
   </pre>
@@ -18,6 +19,9 @@ import { Prop, Component } from 'vue-property-decorator';
 export default class CodeShowcase extends Vue {
   @Prop()
   private flexOption!: string;
+
+  @Prop()
+  private flexAttribute!: string;
 }
 </script>
 
