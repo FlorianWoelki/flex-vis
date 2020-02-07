@@ -6,7 +6,8 @@
       <h1>Align Content</h1>
       <v-divider short></v-divider>
       <p class="definition">
-        The <kbd>align-content</kbd> aligns the flex lines horizontally.
+        The <kbd>align-content</kbd> aligns the flex lines or the container
+        with the items inside horizontally.
       </p>
 
       <v-row>
