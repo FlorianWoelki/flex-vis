@@ -3,8 +3,7 @@
   <pre>
     <code class="code-showcase" data-lang="CSS">
 <span class="css-class">.container</span> {
-  <span class="css-key">display</span>: <span class="css-value">flex</span>;
-  <slot></slot>
+  <span class="css-key">display</span>: <span class="css-value">flex</span>;<br v-if="customContent"/>  <slot v-if="customContent"></slot>
   <span class="css-key">{{this.flexAttribute}}</span>: <span class="css-value">{{this.flexOption}}</span>;
 }
     </code>
@@ -19,6 +18,9 @@ import { Prop, Component } from 'vue-property-decorator';
 export default class CodeShowcase extends Vue {
   @Prop()
   private flexOption!: string;
+
+  @Prop({ default: false })
+  private customContent!: boolean;
 
   @Prop()
   private flexAttribute!: string;

@@ -37,7 +37,8 @@
           <p>Default: <kbd>stretch</kbd></p>
           <v-space large></v-space>
 
-          <CodeShowcase :flexOption="flexOption" flexAttribute="align-content">
+          <CodeShowcase :flexOption="flexOption" flexAttribute="align-content"
+          :customContent="true">
             <span class="css-key">flex-flow</span>: <span class="css-value">row wrap</span>;
           </CodeShowcase>
         </v-col>
