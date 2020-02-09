@@ -35,40 +35,33 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { Component } from 'vue-property-decorator';
 
-export default Vue.extend({
-  name: 'Navbar',
+@Component({})
+export default class Navbar extends Vue {
+  private flexOptions: Array<String> = [
+    'order', 'direction', 'grow', 'wrap', 'shrink',
+    'justify-content', 'flex', 'align-self', 'align-items', 'align-content',
+  ];
 
-  data() {
-    return {
-      flexOptions: [
-        'order', 'direction', 'grow', 'wrap', 'shrink',
-        'justify-content', 'flex', 'align-self', 'align-items', 'align-content',
-      ],
-    };
-  },
+  private get flexOptionsSorted(): String[] {
+    const sorted = this.flexOptions;
+    sorted.sort((a, b) => {
+      if (a > b) return 1;
+      if (b > a) return -1;
+      return 0;
+    });
+    return sorted;
+  }
 
-  computed: {
-    flexOptionsSorted(): string[] {
-      const sorted = this.flexOptions;
-      sorted.sort((a, b) => {
-        if (a > b) return 1;
-        if (b > a) return -1;
-        return 0;
-      });
-      return sorted;
-    },
-  },
+  private toggleDarkMode(): void {
+    this.$store.commit('toggleDarkMode');
+  }
 
-  methods: {
-    toggleDarkMode() {
-      this.$store.commit('toggleDarkMode');
-    },
-    flexOptionsRoutes(flexOption: string): string {
-      return flexOption.replace('-', '');
-    },
-  },
-});
+  private flexOptionsRoutes(flexOption: string): String {
+    return flexOption.replace('-', '');
+  }
+}
 </script>
 
 <style lang="scss">
