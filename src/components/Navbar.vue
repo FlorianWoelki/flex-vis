@@ -22,7 +22,12 @@
     </v-nav-region>
     <v-nav-region position="right">
       <div class="custom-nav-item">
-        <v-toggler id="dark-mode-checkbox" dataCheckIcon="DARK" dataUncheckIcon="LIGHT"></v-toggler>
+        <v-toggler
+          id="dark-mode-checkbox"
+          dataCheckIcon="DARK"
+          dataUncheckIcon="LIGHT"
+          @change="toggleDarkMode()"
+        ></v-toggler>
       </div>
     </v-nav-region>
   </v-navbar>
@@ -56,6 +61,9 @@ export default Vue.extend({
   },
 
   methods: {
+    toggleDarkMode() {
+      this.$store.commit('toggleDarkMode');
+    },
     flexOptionsRoutes(flexOption: string): string {
       return flexOption.replace('-', '');
     },
