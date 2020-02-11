@@ -78,6 +78,8 @@ export default class AlignContent extends Vue {
 @import '@/scss/_variables.scss';
 
 #align-content-showcase {
+  min-height: 100vh;
+
   .divider {
     margin-top: 0;
   }

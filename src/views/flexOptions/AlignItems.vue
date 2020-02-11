@@ -1,5 +1,5 @@
 <template>
-  <section id="align-content-showcase">
+  <section id="align-items-showcase">
     <v-space></v-space>
     <v-space xlarge></v-space>
     <v-container>
@@ -73,7 +73,9 @@ export default class AlignItems extends Vue {
 <style lang="scss">
 @import '@/scss/_variables.scss';
 
-#align-content-showcase {
+#align-items-showcase {
+  min-height: 100vh;
+
   .divider {
     margin-top: 0;
   }
