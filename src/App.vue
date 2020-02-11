@@ -24,12 +24,17 @@ export default Vue.extend({
 #app {
   background-color: #f1f1f1;
 
-  &.dark {
-    background-color: #1f1f1f;
+  h1 {
+    color: $base-text-color;
   }
-}
 
-h1 {
-  color: $base-text-color;
+  &.dark {
+    background-color: #0f0f0f;
+    color: #f1f1f1;
+
+    h1 {
+      color: #f1f1f1;
+    }
+  }
 }
 </style>
