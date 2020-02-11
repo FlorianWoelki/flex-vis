@@ -1,5 +1,5 @@
 <template>
-  <v-navbar fixed>
+  <v-navbar fixed :dark="darkMode">
     <template v-slot:brandTitle>
       <router-link to="/">
       <h6>Flexbox Visualizer</h6>
@@ -43,6 +43,10 @@ export default class Navbar extends Vue {
     'order', 'direction', 'grow', 'wrap', 'shrink',
     'justify-content', 'flex', 'align-self', 'align-items', 'align-content',
   ];
+
+  private get darkMode(): boolean {
+    return this.$store.state.darkMode;
+  }
 
   private get flexOptionsSorted(): String[] {
     const sorted = this.flexOptions;
