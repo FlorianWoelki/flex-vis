@@ -22,18 +22,18 @@ export default Vue.extend({
 @import './scss/_variables.scss';
 
 #app {
-  background-color: #f1f1f1;
+  background-color: $lightmode-color;
 
   h1 {
     color: $base-text-color;
   }
 
   &.dark {
-    background-color: #0f0f0f;
-    color: #f1f1f1;
+    background-color: $darkmode-color;
+    color: $lightmode-color;
 
     h1 {
-      color: #f1f1f1;
+      color: $lightmode-color;
     }
   }
 }
