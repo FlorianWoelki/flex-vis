@@ -10,6 +10,12 @@ export default new Vuex.Store({
   mutations: {
     toggleDarkMode(state) {
       state.darkMode = !state.darkMode;
+
+      if (state.darkMode) {
+        document.getElementById('app')!!.classList.add('dark');
+      } else {
+        document.getElementById('app')!!.classList.remove('dark');
+      }
     },
   },
 });

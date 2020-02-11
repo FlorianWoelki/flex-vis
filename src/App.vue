@@ -21,6 +21,14 @@ export default Vue.extend({
 <style lang="scss">
 @import './scss/_variables.scss';
 
+#app {
+  background-color: #f1f1f1;
+
+  &.dark {
+    background-color: #1f1f1f;
+  }
+}
+
 h1 {
   color: $base-text-color;
 }
