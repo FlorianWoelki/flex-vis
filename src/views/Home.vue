@@ -28,3 +28,39 @@ export default Vue.extend({
   },
 });
 </script>
+
+<style lang="scss">
+@import '@/scss/_variables.scss';
+
+.flex-option-showcase {
+  min-height: 100vh;
+
+  .divider {
+    margin-top: 0;
+  }
+
+  .definition {
+    font-size: 18px;
+  }
+
+  .showcase {
+    border: 0.05rem solid #ccc;
+    height: 350px;
+    padding: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+
+    .square {
+      background-color: $main-color;
+      height: 50px;
+      width: 132px;
+
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 22px;
+    }
+  }
+}
+</style>

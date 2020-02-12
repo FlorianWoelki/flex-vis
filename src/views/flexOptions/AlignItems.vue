@@ -1,5 +1,5 @@
 <template>
-  <section id="align-items-showcase">
+  <section class="flex-option-showcase">
     <v-space></v-space>
     <v-space xlarge></v-space>
     <v-container>
@@ -69,39 +69,3 @@ export default class AlignItems extends Vue {
   }
 }
 </script>
-
-<style lang="scss">
-@import '@/scss/_variables.scss';
-
-#align-items-showcase {
-  min-height: 100vh;
-
-  .divider {
-    margin-top: 0;
-  }
-
-  .definition {
-    font-size: 18px;
-  }
-
-  .showcase {
-    border: 0.05rem solid #ccc;
-    height: 350px;
-    padding: 1rem;
-    display: flex;
-    flex-flow: row wrap;
-
-    .square {
-      background-color: $main-color;
-      height: 50px;
-      width: 132px;
-
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 22px;
-    }
-  }
-}
-</style>
