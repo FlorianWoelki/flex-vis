@@ -46,7 +46,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
-import CodeShowcase from '@/components/CodeShowcase.vue';
+import CodeShowcase from '@/components/flexOption/CodeShowcase.vue';
 
 @Component({
   components: {
