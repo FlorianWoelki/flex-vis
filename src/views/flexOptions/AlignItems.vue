@@ -10,7 +10,7 @@
       </p>
 
       <v-row>
-        <v-col c="4">
+        <v-col c="5">
           <div class="showcase" :style="applyStyles">
             <div class="square">1</div>
             <div class="square">2</div>
@@ -18,7 +18,7 @@
             <div class="square">4</div>
           </div>
         </v-col>
-        <v-col c="6" o="2">
+        <v-col c="5" o="2">
           <v-dropdown>
             <template v-slot:button>
               <v-btn dropdown color="link">
