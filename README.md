@@ -16,6 +16,7 @@ In this repository, you can see how I built this website, where you can see a vi
 ## 🛠 Built with
 - [vue.js](https://vuejs.org/)
 - [vue-cirrus](https://florianwoelki.github.io/vue-cirrus/#/)
+- [vuex](https://vuex.vuejs.org/)
 
 ## 🤝 Contributing
 *Coming Soon*
