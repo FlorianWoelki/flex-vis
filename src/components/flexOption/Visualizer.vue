@@ -1,8 +1,9 @@
 <template>
   <v-row>
     <v-col c="5">
-      <div class="showcase" :style="applyStyles">
-        <div class="square">1</div>
+      <div class="showcase" :style="!focusOneItem ? applyStyles : null">
+        <div v-if="focusOneItem" id="focused-square" class="square" :style="applyStyles">1</div>
+        <div v-else class="square">1</div>
         <div class="square">2</div>
         <div class="square">3</div>
         <div class="square">4</div>
@@ -48,6 +49,9 @@ import CodeShowcase from '@/components/flexOption/CodeShowcase.vue';
   },
 })
 export default class Visualizer extends Vue {
+  @Prop()
+  private focusOneItem!: boolean;
+
   @Prop({ default: null })
   private defaultFlexValue!: string;
 
@@ -73,3 +77,9 @@ export default class Visualizer extends Vue {
   }
 }
 </script>
+
+<style lang="scss">
+#focused-square {
+  background-color: #e74c3c;
+}
+</style>
