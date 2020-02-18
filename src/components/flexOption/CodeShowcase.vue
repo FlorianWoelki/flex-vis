@@ -2,7 +2,7 @@
   <!-- eslint-disable-->
   <pre>
     <code :class="`code-showcase${darkMode ? ' dark' : ''}`" data-lang="CSS">
-<span class="css-class">.container</span> {
+<span v-if="isFlexItem" class="css-class">.flex-item</span><span v-else class="css-class">.container</span> {
   <span class="css-key">display</span>: <span class="css-value">flex</span>;<br v-if="customContent"/>  <slot v-if="customContent"></slot>
   <span class="css-key">{{this.flexAttribute}}</span>: <span class="css-value">{{this.flexOption}}</span>;
 }
@@ -21,6 +21,9 @@ export default class CodeShowcase extends Vue {
 
   @Prop({ default: false })
   private customContent!: boolean;
+
+  @Prop({ default: false })
+  private isFlexItem!: boolean;
 
   @Prop()
   private flexAttribute!: string;

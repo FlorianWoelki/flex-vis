@@ -15,6 +15,7 @@
         flexAttribute="align-self"
         :flexOptions="flexOptions"
         :focusOneItem="true"
+        :isFlexItem="true"
       >
       </Visualizer>
     </v-container>
