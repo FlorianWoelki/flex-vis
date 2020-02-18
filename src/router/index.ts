@@ -5,6 +5,7 @@ import AlignContent from '../views/flexOptions/AlignContent.vue';
 import AlignItems from '../views/flexOptions/AlignItems.vue';
 import JustifyContent from '../views/flexOptions/JustifyContent.vue';
 import AlignSelf from '../views/flexOptions/AlignSelf.vue';
+import FlexDirection from '../views/flexOptions/FlexDirection.vue';
 
 Vue.use(VueRouter);
 
@@ -13,6 +14,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home,
+  },
+  {
+    path: '/flexdirection',
+    name: 'flexDirection',
+    component: FlexDirection,
   },
   {
     path: '/aligncontent',
