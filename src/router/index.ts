@@ -6,6 +6,7 @@ import AlignItems from '../views/flexOptions/AlignItems.vue';
 import JustifyContent from '../views/flexOptions/JustifyContent.vue';
 import AlignSelf from '../views/flexOptions/AlignSelf.vue';
 import FlexDirection from '../views/flexOptions/FlexDirection.vue';
+import FlexProperty from '../views/flexOptions/FlexProperty.vue';
 
 Vue.use(VueRouter);
 
@@ -39,6 +40,11 @@ const routes = [
     path: '/alignself',
     name: 'alignSelf',
     component: AlignSelf,
+  },
+  {
+    path: '/flex',
+    name: 'flexProperty',
+    component: FlexProperty,
   },
 ];
 
