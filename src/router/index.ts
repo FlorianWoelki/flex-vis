@@ -7,6 +7,7 @@ import JustifyContent from '../views/flexOptions/JustifyContent.vue';
 import AlignSelf from '../views/flexOptions/AlignSelf.vue';
 import FlexDirection from '../views/flexOptions/FlexDirection.vue';
 import FlexProperty from '../views/flexOptions/FlexProperty.vue';
+import FlexGrow from '../views/flexOptions/FlexGrow.vue';
 
 Vue.use(VueRouter);
 
@@ -45,6 +46,11 @@ const routes = [
     path: '/flex',
     name: 'flexProperty',
     component: FlexProperty,
+  },
+  {
+    path: '/flexgrow',
+    name: 'flexGrow',
+    component: FlexGrow,
   },
 ];
 
