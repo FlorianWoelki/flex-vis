@@ -10,6 +10,7 @@ import FlexProperty from '../views/flexOptions/FlexProperty.vue';
 import FlexGrow from '../views/flexOptions/FlexGrow.vue';
 import Order from '../views/flexOptions/Order.vue';
 import FlexShrink from '../views/flexOptions/FlexShrink.vue';
+import FlexWrap from '../views/flexOptions/FlexWrap.vue';
 
 Vue.use(VueRouter);
 
@@ -63,6 +64,11 @@ const routes = [
     path: '/flexshrink',
     name: 'flexShrink',
     component: FlexShrink,
+  },
+  {
+    path: '/flexwrap',
+    name: 'flexWrap',
+    component: FlexWrap,
   },
 ];
 
