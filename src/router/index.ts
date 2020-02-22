@@ -8,6 +8,7 @@ import AlignSelf from '../views/flexOptions/AlignSelf.vue';
 import FlexDirection from '../views/flexOptions/FlexDirection.vue';
 import FlexProperty from '../views/flexOptions/FlexProperty.vue';
 import FlexGrow from '../views/flexOptions/FlexGrow.vue';
+import Order from '../views/flexOptions/Order.vue';
 
 Vue.use(VueRouter);
 
@@ -51,6 +52,11 @@ const routes = [
     path: '/flexgrow',
     name: 'flexGrow',
     component: FlexGrow,
+  },
+  {
+    path: '/order',
+    name: 'order',
+    component: Order,
   },
 ];
 
