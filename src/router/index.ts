@@ -9,6 +9,7 @@ import FlexDirection from '../views/flexOptions/FlexDirection.vue';
 import FlexProperty from '../views/flexOptions/FlexProperty.vue';
 import FlexGrow from '../views/flexOptions/FlexGrow.vue';
 import Order from '../views/flexOptions/Order.vue';
+import FlexShrink from '../views/flexOptions/FlexShrink.vue';
 
 Vue.use(VueRouter);
 
@@ -57,6 +58,11 @@ const routes = [
     path: '/order',
     name: 'order',
     component: Order,
+  },
+  {
+    path: '/flexshrink',
+    name: 'flexShrink',
+    component: FlexShrink,
   },
 ];
 
