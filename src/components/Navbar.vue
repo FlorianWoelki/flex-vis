@@ -40,7 +40,7 @@ import { Component } from 'vue-property-decorator';
 @Component({})
 export default class Navbar extends Vue {
   private flexOptions: Array<String> = [
-    'order', 'flex-direction', 'flex-grow', 'wrap', 'shrink',
+    'order', 'flex-direction', 'flex-grow', 'flex-wrap', 'flex-shrink',
     'justify-content', 'flex', 'align-self', 'align-items', 'align-content',
   ];
 
