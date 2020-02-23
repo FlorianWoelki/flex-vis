@@ -10,6 +10,7 @@
       </p>
 
       <Visualizer
+        dropdownButtonTitle="Shrink"
         defaultFlexValue="1"
         flexAttribute="flex-shrink"
         :flexOptions="flexOptions"

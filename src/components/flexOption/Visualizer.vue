@@ -13,7 +13,8 @@
       <v-dropdown>
         <template v-slot:button>
           <v-btn dropdown color="link">
-            Alignments <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
+            {{ dropdownButtonTitle }}
+            <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
           </v-btn>
         </template>
         <v-dropdown-item
@@ -50,6 +51,9 @@ import CodeShowcase from '@/components/flexOption/CodeShowcase.vue';
   },
 })
 export default class Visualizer extends Vue {
+  @Prop({ default: 'Alignments' })
+  private dropdownButtonTitle!: string;
+
   @Prop()
   private focusOneItem!: boolean;
 

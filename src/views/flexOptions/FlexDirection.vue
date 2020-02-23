@@ -11,6 +11,7 @@
       </p>
 
       <Visualizer
+        dropdownButtonTitle="Direction"
         defaultFlexValue="row"
         flexAttribute="flex-direction"
         :flexOptions="flexOptions"

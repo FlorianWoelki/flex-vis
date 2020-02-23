@@ -10,6 +10,7 @@
       </p>
 
       <Visualizer
+        dropdownButtonTitle="Grow"
         defaultFlexValue="0"
         flexAttribute="flex-grow"
         :flexOptions="flexOptions"

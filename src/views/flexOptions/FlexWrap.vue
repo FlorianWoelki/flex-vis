@@ -11,6 +11,7 @@
       </p>
 
       <Visualizer
+        dropdownButtonTitle="Wrap"
         defaultFlexValue="nowrap"
         flexAttribute="flex-wrap"
         :flexOptions="flexOptions"
