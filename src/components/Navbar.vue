@@ -14,7 +14,7 @@
         <v-nav-dropdown-item
           v-for="item in flexOptionsSorted"
           :key="item"
-          :href="`#/${flexOptionsRoutes(item)}`"
+          :href="`#/flexOptions/${flexOptionsRoutes(item)}`"
         >
           {{ item }}
         </v-nav-dropdown-item>

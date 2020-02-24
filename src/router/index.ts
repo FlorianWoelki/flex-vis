@@ -1,79 +1,18 @@
 import Vue from 'vue';
-import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
-import AlignContent from '../views/flexOptions/AlignContent.vue';
-import AlignItems from '../views/flexOptions/AlignItems.vue';
-import JustifyContent from '../views/flexOptions/JustifyContent.vue';
-import AlignSelf from '../views/flexOptions/AlignSelf.vue';
-import FlexDirection from '../views/flexOptions/FlexDirection.vue';
-import FlexProperty from '../views/flexOptions/FlexProperty.vue';
-import FlexGrow from '../views/flexOptions/FlexGrow.vue';
-import Order from '../views/flexOptions/Order.vue';
-import FlexShrink from '../views/flexOptions/FlexShrink.vue';
-import FlexWrap from '../views/flexOptions/FlexWrap.vue';
+import Router from 'vue-router';
+import routes from 'vue-auto-routing';
+import { createRouterLayout } from 'vue-router-layout';
 
-Vue.use(VueRouter);
+Vue.use(Router);
 
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: Home,
-  },
-  {
-    path: '/flexdirection',
-    name: 'flexDirection',
-    component: FlexDirection,
-  },
-  {
-    path: '/aligncontent',
-    name: 'alignContent',
-    component: AlignContent,
-  },
-  {
-    path: '/alignitems',
-    name: 'alignItems',
-    component: AlignItems,
-  },
-  {
-    path: '/justifycontent',
-    name: 'justifyContent',
-    component: JustifyContent,
-  },
-  {
-    path: '/alignself',
-    name: 'alignSelf',
-    component: AlignSelf,
-  },
-  {
-    path: '/flex',
-    name: 'flexProperty',
-    component: FlexProperty,
-  },
-  {
-    path: '/flexgrow',
-    name: 'flexGrow',
-    component: FlexGrow,
-  },
-  {
-    path: '/order',
-    name: 'order',
-    component: Order,
-  },
-  {
-    path: '/flexshrink',
-    name: 'flexShrink',
-    component: FlexShrink,
-  },
-  {
-    path: '/flexwrap',
-    name: 'flexWrap',
-    component: FlexWrap,
-  },
-];
+const RouterLayout = createRouterLayout(layout => import(`@/layouts/${layout}.vue`));
 
-const router = new VueRouter({
-  routes,
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      component: RouterLayout,
+      children: routes,
+    },
+  ],
 });
-
-export default router;
