@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueCirrus from 'vue-cirrus';
 import router from './router';
 import store from './store';
-import App from './App.vue';
+import App from './layouts/default.vue';
 
 import 'vue-cirrus/dist/vue-cirrus.css';
 
