@@ -31,6 +31,7 @@ import Visualizer from '@/components/flexOption/Visualizer.vue';
   components: {
     Visualizer,
   },
+  layout: 'navLayout',
 })
 export default class AlignContent extends Vue {
   private flexOptions: string[] = ['flex-start', 'flex-end', 'center', 'baseline', 'stretch'];

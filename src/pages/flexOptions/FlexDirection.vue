@@ -30,6 +30,7 @@ import Visualizer from '@/components/flexOption/Visualizer.vue';
   components: {
     Visualizer,
   },
+  layout: 'navLayout',
 })
 export default class AlignItems extends Vue {
   private flexOptions: string[] = ['row', 'row-reverse', 'column', 'column-reverse'];
