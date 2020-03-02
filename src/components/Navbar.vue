@@ -1,5 +1,5 @@
 <template>
-  <v-navbar fixed :dark="darkMode">
+  <v-navbar id="navbar" clear fixed :dark="darkMode">
     <template v-slot:brandTitle>
       <router-link to="/">
       <h6>Flexbox Visualizer</h6>
@@ -43,6 +43,22 @@ export default class Navbar extends Vue {
     'order', 'flex-direction', 'flex-grow', 'flex-wrap', 'flex-shrink',
     'justify-content', 'flex', 'align-self', 'align-items', 'align-content',
   ];
+
+  mounted() {
+    /* eslint-disable-next-line */
+    window.addEventListener('scroll', function(_) {
+      const scroll = this.scrollY;
+
+      const navbarElement = document.getElementById('navbar');
+      if (navbarElement !== null) {
+        if (scroll >= 50) {
+          navbarElement.classList.remove('header-clear');
+        } else {
+          navbarElement.classList.add('header-clear');
+        }
+      }
+    });
+  }
 
   private get darkMode(): boolean {
     return this.$store.state.darkMode;
