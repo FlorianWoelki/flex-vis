@@ -25,7 +25,7 @@ export default Vue.extend({
 
   methods: {
     handleGetStarted(): void {
-      this.$router.push({ path: 'aligncontent' });
+      this.$router.push({ path: 'flexOptions/aligncontent' });
     },
   },
 });
