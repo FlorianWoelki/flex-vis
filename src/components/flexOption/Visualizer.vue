@@ -10,7 +10,7 @@
       </div>
     </v-col>
     <v-col c="5" o="2">
-      <v-dropdown>
+      <v-dropdown :dark="darkMode">
         <template v-slot:button>
           <v-btn dropdown color="link">
             {{ dropdownButtonTitle }}
@@ -76,6 +76,10 @@ export default class Visualizer extends Vue {
 
   changeFlexOption(option: string) {
     this.flexOption = option;
+  }
+
+  private get darkMode(): boolean {
+    return this.$store.state.darkMode;
   }
 
   get applyStyles(): Object {
