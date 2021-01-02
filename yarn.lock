@@ -9567,7 +9567,7 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-vue-auto-routing@^0.4.1:
+vue-auto-routing@^0.4.0:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/vue-auto-routing/-/vue-auto-routing-0.4.1.tgz#c601d47a3a7adfd03f98ebf7b23c50eb6189c88c"
   integrity sha512-xXmOnvgGZ7758F/OcNHSNoy6ku1rgISo2KQ/FMidBvQf/JKwvMfxad053YtIYavxHdc1am+nh8+slTnwnteMVw==
