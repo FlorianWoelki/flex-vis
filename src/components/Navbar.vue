@@ -1,8 +1,8 @@
 <template>
-  <v-navbar id="navbar" clear fixed :dark="darkMode">
-    <template v-slot:brandTitle>
+  <v-navbar ref="navbar" clear fixed :dark="darkMode">
+    <template #brandTitle>
       <router-link to="/">
-      <h6>Flexbox Visualizer</h6>
+        <h6>Flexbox Visualizer</h6>
       </router-link>
     </template>
     <v-nav-region position="left">
@@ -20,16 +20,16 @@
         </v-nav-dropdown-item>
       </v-nav-dropdown>
     </v-nav-region>
-    <v-nav-region position="right">
+    <!--<v-nav-region position="right">
       <div class="custom-nav-item">
-        <v-toggler
+        <v-toggle
           id="dark-mode-checkbox"
           dataCheckIcon="DARK"
           dataUncheckIcon="LIGHT"
           @change="toggleDarkMode()"
-        ></v-toggler>
+        ></v-toggle>
       </div>
-    </v-nav-region>
+    </v-nav-region>-->
   </v-navbar>
 </template>
 
@@ -45,11 +45,11 @@ export default class Navbar extends Vue {
   ];
 
   mounted() {
+    const navbarElement = (this.$refs.navbar as any).$el as HTMLElement;
     /* eslint-disable-next-line */
-    window.addEventListener('scroll', function(_) {
+    window.addEventListener('scroll', function (_) {
       const scroll = this.scrollY;
 
-      const navbarElement = document.getElementById('navbar');
       if (navbarElement !== null) {
         if (scroll >= 50) {
           navbarElement.classList.remove('header-clear');
