@@ -1,8 +1,5 @@
 <template>
-  <!-- eslint-disable-->
-  <pre>
-    <v-code lang="css" :dark="darkMode">{{ code }}</v-code>
-  </pre>
+  <v-code lang="css" :dark="darkMode">{{ code }}</v-code>
 </template>
 
 <script lang="ts">

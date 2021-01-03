@@ -10,32 +10,35 @@
       </div>
     </v-col>
     <v-col c="5" o="2">
-      <v-dropdown :dark="darkMode">
-        <template v-slot:button>
-          <v-btn dropdown color="link">
-            {{ dropdownButtonTitle }}
-            <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
-          </v-btn>
-        </template>
-        <v-dropdown-item
-          v-for="option in flexOptions"
-          :key="option"
-          @click="changeFlexOption(option)"
-        >
-          {{option}}
-        </v-dropdown-item>
-      </v-dropdown>
-      <p>Default: <kbd>{{ defaultFlexValue }}</kbd></p>
-      <v-space large></v-space>
+      <div class="u-flex u-flex-column">
+        <div>
+          <v-dropdown :dark="darkMode">
+            <template v-slot:button>
+              <v-btn dropdown color="link">
+                {{ dropdownButtonTitle }}
+                <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
+              </v-btn>
+            </template>
+            <v-dropdown-item
+              v-for="option in flexOptions"
+              :key="option"
+              @click="changeFlexOption(option)"
+            >
+              {{option}}
+            </v-dropdown-item>
+          </v-dropdown>
+          <p>Default: <kbd>{{ defaultFlexValue }}</kbd></p>
+        </div>
 
-      <CodeShowcase
-        :flexOption="flexOption"
-        :flexAttribute="flexAttribute"
-        :customContent="customContent"
-        :isFlexItem="isFlexItem"
-      >
-        <slot></slot>
-      </CodeShowcase>
+        <CodeShowcase
+          :flexOption="flexOption"
+          :flexAttribute="flexAttribute"
+          :customContent="customContent"
+          :isFlexItem="isFlexItem"
+        >
+          <slot></slot>
+        </CodeShowcase>
+      </div>
     </v-col>
   </v-row>
 </template>
