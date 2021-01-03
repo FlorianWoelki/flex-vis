@@ -46,6 +46,7 @@ export default Vue.extend({
 
   .showcase {
     border: 0.05rem solid #ccc;
+    background-color: #ddd;
     height: 350px;
     padding: 1rem;
     display: flex;
