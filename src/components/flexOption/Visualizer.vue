@@ -1,5 +1,5 @@
 <template>
-  <v-row>
+  <v-row level>
     <v-col c="5">
       <div class="showcase" :style="!focusOneItem ? applyStyles : null">
         <div v-if="focusOneItem" id="focused-square" class="square" :style="applyStyles">1</div>
