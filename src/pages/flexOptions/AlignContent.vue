@@ -14,10 +14,7 @@
         defaultFlexValue="stretch"
         flexAttribute="align-content"
         :flexOptions="flexOptions"
-        :customContent="true"
-      >
-        <span class="css-key">flex-flow</span>: <span class="css-value">row wrap</span>;
-      </Visualizer>
+      >flex-flow: row wrap;</Visualizer>
     </v-container>
   </section>
 </template>
