@@ -30,8 +30,7 @@ export default class CodeShowcase extends Vue {
   private get code(): string {
     return `${this.isFlexItem ? '.flex-item' : '.container'} {
   display: flex;
-  ${this.flexAttribute}: ${this.flexOption};
-  ${this.$slots.default![0].text}
+  ${this.flexAttribute}: ${this.flexOption};${this.$slots.default ? `\n  ${this.$slots.default![0].text}` : ''}
 }`;
   }
 }
