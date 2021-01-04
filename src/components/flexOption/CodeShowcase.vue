@@ -9,18 +9,18 @@
 import Vue from 'vue';
 import { Prop, Component } from 'vue-property-decorator';
 
-@Component({})
+@Component
 export default class CodeShowcase extends Vue {
-  @Prop()
+  @Prop({ type: String, required: true })
   private flexOption!: string;
 
-  @Prop({ default: false })
+  @Prop({ type: Boolean, default: false })
   private customContent!: boolean;
 
-  @Prop({ default: false })
+  @Prop({ type: Boolean, default: false })
   private isFlexItem!: boolean;
 
-  @Prop()
+  @Prop({ type: String, required: true })
   private flexAttribute!: string;
 
   private get darkMode(): boolean {
