@@ -63,6 +63,12 @@ export default Vue.extend({
       align-items: center;
       font-size: 22px;
     }
+
+    &.different-sizes {
+      .square:nth-child(2) {
+        height: 125px;
+      }
+    }
   }
 }
 </style>

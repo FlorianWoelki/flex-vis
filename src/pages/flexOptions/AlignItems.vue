@@ -13,6 +13,7 @@
         defaultFlexValue="stretch"
         flexAttribute="align-items"
         :flexOptions="flexOptions"
+        differentSize
       >
       </Visualizer>
     </v-container>
