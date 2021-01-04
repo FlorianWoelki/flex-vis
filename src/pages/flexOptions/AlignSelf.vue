@@ -16,6 +16,7 @@
         :flexOptions="flexOptions"
         :focusOneItem="true"
         :isFlexItem="true"
+        differentSize
       >
       </Visualizer>
     </v-container>

@@ -8,8 +8,9 @@
         <div class="square">3</div>
         <div class="square">4</div>
       </div>
-      <div v-else class="showcase different-sizes" :style="applyStyles">
-        <div class="square">1</div>
+      <div v-else class="showcase different-sizes" :style="!focusOneItem ? applyStyles : null">
+        <div v-if="focusOneItem" id="focused-square" class="square" :style="applyStyles">1</div>
+        <div v-else class="square">1</div>
         <div class="square">2</div>
       </div>
     </v-col>
