@@ -38,7 +38,6 @@
         <CodeShowcase
           :flexOption="flexOption"
           :flexAttribute="flexAttribute"
-          :customContent="customContent"
           :isFlexItem="isFlexItem"
         >
           <slot></slot>
@@ -70,9 +69,6 @@ export default class Visualizer extends Vue {
 
   @Prop({ type: Boolean, default: false })
   private differentSize!: boolean;
-
-  @Prop()
-  private customContent!: boolean;
 
   @Prop()
   private isFlexItem!: boolean;

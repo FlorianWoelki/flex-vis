@@ -1,5 +1,4 @@
 <template>
-  <!-- eslint-disable-->
   <pre>
     <v-code :value="code" lang="css" :dark="darkMode"></v-code>
   </pre>
@@ -15,9 +14,6 @@ export default class CodeShowcase extends Vue {
   private flexOption!: string;
 
   @Prop({ type: Boolean, default: false })
-  private customContent!: boolean;
-
-  @Prop({ type: Boolean, default: false })
   private isFlexItem!: boolean;
 
   @Prop({ type: String, required: true })
@@ -30,8 +26,7 @@ export default class CodeShowcase extends Vue {
   private get code(): string {
     return `${this.isFlexItem ? '.flex-item' : '.container'} {
   display: flex;
-  ${this.flexAttribute}: ${this.flexOption};
-  ${this.$slots.default![0].text}
+  ${this.flexAttribute}: ${this.flexOption};${this.$slots.default ? `\n  ${this.$slots.default[0].text}` : ''}
 }`;
   }
 }
