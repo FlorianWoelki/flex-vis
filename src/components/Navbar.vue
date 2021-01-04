@@ -6,7 +6,7 @@
       </router-link>
     </template>
     <v-nav-region position="left">
-      <v-navbar-item blank href="https://github.com/FlorianWoelki/flex-vis">
+      <v-navbar-item target="_blank" href="https://github.com/FlorianWoelki/flex-vis">
         <i class="fab fa-github-alt fa-lg"></i>
       </v-navbar-item>
       <v-nav-dropdown animated>
