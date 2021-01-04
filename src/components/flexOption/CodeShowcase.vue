@@ -1,10 +1,7 @@
 <template>
   <!-- eslint-disable-->
   <pre>
-    <code :class="`code-showcase${darkMode ? ' dark' : ''}`" data-lang="CSS"><span v-if="isFlexItem" class="css-class">.flex-item</span><span v-else class="css-class">.container</span> {
-  <span class="css-key">display</span>: <span class="css-value">flex</span>;<br v-if="customContent"/>  <slot v-if="customContent"></slot>
-  <span class="css-key">{{this.flexAttribute}}</span>: <span class="css-value">{{this.flexOption}}</span>;
-}</code>
+    <v-code :value="code" lang="css" :dark="darkMode"></v-code>
   </pre>
 </template>
 
@@ -29,33 +26,13 @@ export default class CodeShowcase extends Vue {
   private get darkMode(): boolean {
     return this.$store.state.darkMode;
   }
+
+  private get code(): string {
+    return `${this.isFlexItem ? '.flex-item' : '.container'} {
+  display: flex;
+  ${this.flexAttribute}: ${this.flexOption};
+  ${this.$slots.default![0].text}
+}`;
+  }
 }
 </script>
-
-<style lang="scss">
-@import '@/scss/_variables.scss';
-
-code {
-  background: #f6f8fa;
-  display: block;
-  color: #333;
-  overflow-x: auto;
-  max-height: 750px;
-
-  &.code-showcase {
-    padding: 1.5rem 1.5rem 1rem !important;
-  }
-
-  .css-key {
-    color: $css-key-color;
-  }
-
-  .css-value {
-    color: $css-value-color;
-  }
-
-  .css-class {
-    color: $css-class-color;
-  }
-}
-</style>
