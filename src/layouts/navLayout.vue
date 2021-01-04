@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Navbar />
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
@@ -10,8 +10,6 @@ import Vue from 'vue';
 import Navbar from '../components/Navbar.vue';
 
 export default Vue.extend({
-  name: 'App',
-
   components: {
     Navbar,
   },
@@ -23,6 +21,18 @@ export default Vue.extend({
 
 #app {
   background-color: $lightmode-color;
+
+  .flex-option-showcase {
+    min-height: 100vh;
+
+    .divider {
+      margin-top: 0;
+    }
+
+    .definition {
+      font-size: 18px;
+    }
+  }
 
   h1 {
     color: $base-text-color;
