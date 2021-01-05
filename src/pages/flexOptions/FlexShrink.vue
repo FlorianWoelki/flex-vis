@@ -14,8 +14,9 @@
         defaultFlexValue="1"
         flexAttribute="flex-shrink"
         :flexOptions="flexOptions"
-        :focusOneItem="true"
-        :isFlexItem="true"
+        focusOneItem
+        isFlexItem
+        differentSize
       >
       </Visualizer>
     </v-container>
@@ -34,6 +35,6 @@ import Visualizer from '@/components/flexOption/Visualizer.vue';
   layout: 'navLayout',
 })
 export default class AlignContent extends Vue {
-  private flexOptions: string[] = ['1', '2', '3', '4'];
+  private flexOptions: string[] = ['0', '1'];
 }
 </script>
