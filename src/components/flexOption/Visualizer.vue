@@ -2,20 +2,28 @@
   <v-row level>
     <v-col c="5">
       <div v-if="!differentSize" class="showcase" :style="!focusOneItem ? applyStyles : null">
-        <div v-if="focusOneItem" id="focused-square" class="square" :style="applyStyles">1</div>
-        <div v-else class="square">1</div>
-        <div class="square" :style="styleForAlternateSquares">2</div>
-        <div class="square" :style="styleForAlternateSquares">3</div>
-        <div class="square" :style="styleForAlternateSquares">4</div>
+        <div class="showcase-wrapper">
+          <div v-if="focusOneItem" id="focused-square" class="square" :style="applyStyles">1</div>
+          <div v-else class="square">1</div>
+          <div class="square" :style="styleForAlternateSquares">2</div>
+          <div class="square" :style="styleForAlternateSquares">3</div>
+          <div class="square" :style="styleForAlternateSquares">4</div>
+        </div>
       </div>
       <div v-else class="showcase different-sizes" :style="!focusOneItem ? applyStyles : null">
-        <div v-if="focusOneItem" id="focused-square" class="square" :style="applyStyles">1</div>
-        <div v-else class="square">1</div>
-        <div class="square">2</div>
+        <div class="showcase-wrapper" :style="{ width: `${containerWidth}%` }">
+          <div v-if="focusOneItem" id="focused-square" class="square" :style="applyStyles">1</div>
+          <div v-else class="square">1</div>
+          <div class="square">2</div>
+        </div>
       </div>
     </v-col>
     <v-col c="5" o="2">
       <div class="u-flex u-flex-column">
+        <div class="mb-4 width-slider u-flex u-flex-column">
+          <p class="mb-0 text-gray-700">Container width: {{ containerWidth }}%</p>
+          <input v-model="containerWidth" type="range" min="1" max="100">
+        </div>
         <div>
           <v-dropdown :dark="darkMode">
             <template v-slot:button>
@@ -32,7 +40,7 @@
               {{option}}
             </v-dropdown-item>
           </v-dropdown>
-          <p>
+          <p class="text-gray-700">
             Default: <kbd>{{ defaultFlexValue }}</kbd>
             <slot name="additionalInformation"></slot>
           </p>
@@ -87,6 +95,8 @@ export default class Visualizer extends Vue {
 
   private flexOption: string = this.defaultFlexValue;
 
+  private containerWidth = 100;
+
   private changeFlexOption(option: string): void {
     this.flexOption = option;
   }
@@ -109,13 +119,51 @@ export default class Visualizer extends Vue {
   background-color: #e74c3c;
 }
 
+.width-slider {
+  width: 100%;
+  border: none;
+
+  input[type="range"] {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    -webkit-appearance: none;
+    background: transparent;
+
+    &:focus {
+      box-shadow: none !important;
+      border: none !important;
+    }
+
+    &::-webkit-slider-runnable-track {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 0.3em;
+      background: #5e5cc7;
+      border-radius: 1em;
+    }
+
+    &::-webkit-slider-thumb {
+      height: 1em;
+      width: 1em;
+      border-radius: 1em;
+      background: #e74c3c;
+      margin-top: -0.35em;
+      -webkit-appearance: none;
+    }
+  }
+}
+
 .showcase {
   border: 0.05rem solid #ccc;
   background-color: #ddd;
   height: 350px;
   padding: 1rem;
-  display: flex;
-  flex-flow: row wrap;
+
+  .showcase-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+  }
 
   .square {
     background-color: $main-color;

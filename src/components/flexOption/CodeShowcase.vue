@@ -1,7 +1,5 @@
 <template>
-  <pre>
-    <v-code :value="code" lang="css" :dark="darkMode"></v-code>
-  </pre>
+  <v-code :value="code" lang="css" :dark="darkMode"></v-code>
 </template>
 
 <script lang="ts">
