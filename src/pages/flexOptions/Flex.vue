@@ -21,6 +21,9 @@
           flex: '0 auto',
         }"
       >
+        <template #additionalInformation>
+          <span>All non highlighted squares are: <kbd>flex: 0 auto</kbd></span>
+        </template>
       </Visualizer>
     </v-container>
   </section>

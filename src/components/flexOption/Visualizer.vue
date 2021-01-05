@@ -32,7 +32,10 @@
               {{option}}
             </v-dropdown-item>
           </v-dropdown>
-          <p>Default: <kbd>{{ defaultFlexValue }}</kbd></p>
+          <p>
+            Default: <kbd>{{ defaultFlexValue }}</kbd>
+            <slot name="additionalInformation"></slot>
+          </p>
         </div>
 
         <CodeShowcase
