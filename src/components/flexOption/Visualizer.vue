@@ -1,8 +1,15 @@
 <template>
   <v-row level>
     <v-col c="5">
-      <div v-if="!differentSize" class="showcase" :style="!focusOneItem ? applyStyles : null">
-        <div class="showcase-wrapper">
+      <div v-if="!differentSize" class="showcase">
+        <div
+          class="showcase-wrapper"
+          :style="{
+            ...applyStyles,
+            width: `${containerWidth}%`,
+            'flex-flow': $slots.default ? 'row wrap' : null
+          }"
+        >
           <div v-if="focusOneItem" id="focused-square" class="square" :style="applyStyles">1</div>
           <div v-else class="square">1</div>
           <div class="square" :style="styleForAlternateSquares">2</div>
@@ -10,8 +17,15 @@
           <div class="square" :style="styleForAlternateSquares">4</div>
         </div>
       </div>
-      <div v-else class="showcase different-sizes" :style="!focusOneItem ? applyStyles : null">
-        <div class="showcase-wrapper" :style="{ width: `${containerWidth}%` }">
+      <div v-else class="showcase different-sizes">
+        <div
+          class="showcase-wrapper"
+          :style="{
+            ...applyStyles,
+            width: `${containerWidth}%`,
+            'flex-flow': $slots.default ? 'row wrap' : null
+          }"
+        >
           <div v-if="focusOneItem" id="focused-square" class="square" :style="applyStyles">1</div>
           <div v-else class="square">1</div>
           <div class="square">2</div>
@@ -162,7 +176,7 @@ export default class Visualizer extends Vue {
 
   .showcase-wrapper {
     display: flex;
-    flex-flow: row wrap;
+    height: 100%;
   }
 
   .square {

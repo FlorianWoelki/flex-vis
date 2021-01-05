@@ -13,8 +13,7 @@
         defaultFlexValue="flex-start"
         flexAttribute="justify-content"
         :flexOptions="flexOptions"
-      >
-      </Visualizer>
+      >flex-flow: row wrap;</Visualizer>
     </v-container>
   </section>
 </template>
