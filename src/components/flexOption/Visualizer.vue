@@ -4,9 +4,9 @@
       <div v-if="!differentSize" class="showcase" :style="!focusOneItem ? applyStyles : null">
         <div v-if="focusOneItem" id="focused-square" class="square" :style="applyStyles">1</div>
         <div v-else class="square">1</div>
-        <div class="square">2</div>
-        <div class="square">3</div>
-        <div class="square">4</div>
+        <div class="square" :style="styleForAlternateSquares">2</div>
+        <div class="square" :style="styleForAlternateSquares">3</div>
+        <div class="square" :style="styleForAlternateSquares">4</div>
       </div>
       <div v-else class="showcase different-sizes" :style="!focusOneItem ? applyStyles : null">
         <div v-if="focusOneItem" id="focused-square" class="square" :style="applyStyles">1</div>
@@ -78,6 +78,9 @@ export default class Visualizer extends Vue {
 
   @Prop({ type: Array, default: [] })
   private flexOptions!: string[];
+
+  @Prop({ type: String, default: '' })
+  private styleForAlternateSquares!: string;
 
   private flexOption: string = this.defaultFlexValue;
 

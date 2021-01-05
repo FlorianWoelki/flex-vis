@@ -1,5 +1,5 @@
 <template>
-  <section class="flex-option-showcase">
+  <section class="flex flex-option-showcase">
     <v-space></v-space>
     <v-space xlarge></v-space>
     <v-container>
@@ -17,6 +17,9 @@
         :flexOptions="flexOptions"
         :focusOneItem="true"
         :isFlexItem="true"
+        :styleForAlternateSquares="{
+          flex: '0 auto',
+        }"
       >
       </Visualizer>
     </v-container>
@@ -35,6 +38,6 @@ import Visualizer from '@/components/flexOption/Visualizer.vue';
   layout: 'navLayout',
 })
 export default class AlignContent extends Vue {
-  private flexOptions: string[] = ['0 1 auto', '0 auto', 'auto', 'none', '1'];
+  private flexOptions: string[] = ['1 0 auto', '0 1 auto', '0 auto', 'auto', 'none', '1'];
 }
 </script>
