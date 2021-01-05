@@ -58,30 +58,30 @@ import CodeShowcase from '@/components/flexOption/CodeShowcase.vue';
   },
 })
 export default class Visualizer extends Vue {
-  @Prop({ default: 'Alignments' })
+  @Prop({ type: String, default: 'Alignments' })
   private dropdownButtonTitle!: string;
 
-  @Prop()
+  @Prop({ type: Boolean, default: false })
   private focusOneItem!: boolean;
 
-  @Prop({ default: null })
+  @Prop({ type: String, default: '' })
   private defaultFlexValue!: string;
 
   @Prop({ type: Boolean, default: false })
   private differentSize!: boolean;
 
-  @Prop()
+  @Prop({ type: Boolean, default: false })
   private isFlexItem!: boolean;
 
-  @Prop({ default: null })
+  @Prop({ type: String, default: '' })
   private flexAttribute!: string;
 
-  @Prop({ default: null })
+  @Prop({ type: Array, default: [] })
   private flexOptions!: string[];
 
   private flexOption: string = this.defaultFlexValue;
 
-  changeFlexOption(option: string) {
+  private changeFlexOption(option: string): void {
     this.flexOption = option;
   }
 
@@ -89,7 +89,7 @@ export default class Visualizer extends Vue {
     return this.$store.state.darkMode;
   }
 
-  get applyStyles(): Object {
+  private get applyStyles(): Object {
     return {
       [this.flexAttribute]: this.flexOption,
     };

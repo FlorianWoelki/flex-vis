@@ -32,8 +32,6 @@ import Vue from 'vue';
 import WhyFlexboxBox from './WhyFlexboxBox.vue';
 
 export default Vue.extend({
-  name: 'WhyFlexbox',
-
   components: {
     WhyFlexboxBox,
   },

@@ -21,8 +21,6 @@
 import Vue from 'vue';
 
 export default Vue.extend({
-  name: 'Hero',
-
   methods: {
     handleGetStarted(): void {
       this.$router.push({ path: 'flexOptions/aligncontent' });

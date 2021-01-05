@@ -6,14 +6,6 @@
   </v-footer>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
-
-export default Vue.extend({
-  name: 'Footer',
-});
-</script>
-
 <style lang="scss">
 footer {
   padding-top: 50px;
