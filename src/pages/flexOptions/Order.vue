@@ -16,6 +16,9 @@
         :focusOneItem="true"
         :isFlexItem="true"
       >
+        <template #additionalInformation>
+          <p>Not highlighted squares are has a incremental order property.</p>
+        </template>
       </Visualizer>
     </v-container>
   </section>

@@ -22,7 +22,7 @@
         }"
       >
         <template #additionalInformation>
-          <span>All non highlighted squares are: <kbd>flex: 0 auto</kbd></span>
+          <p>All non highlighted squares are: <kbd>flex: 0 auto</kbd></p>
         </template>
       </Visualizer>
     </v-container>
