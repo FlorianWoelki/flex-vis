@@ -2,16 +2,20 @@
   <div id="app">
     <Navbar />
     <router-view />
+    <v-space></v-space>
+    <Footer></Footer>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import Navbar from '../components/Navbar.vue';
+import Footer from '@/components/Footer.vue';
+import Navbar from '@/components/Navbar.vue';
 
 export default Vue.extend({
   components: {
     Navbar,
+    Footer,
   },
 });
 </script>
