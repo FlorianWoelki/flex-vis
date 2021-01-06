@@ -1,5 +1,5 @@
 <template>
-  <v-card equalHeight class="u-text-center" :dark="darkMode">
+  <v-card equalHeight class="u-text-center">
     <i :class="`fas fa-${icon} fa-5x`"></i>
     <h5>{{ title }}</h5>
     <p>
@@ -35,5 +35,9 @@ export default class WhyFlexboxBox extends Vue {
   i {
     color: $main-color;
   }
+}
+
+.dark .card {
+  background-color: rgba(0, 0, 0, 0.87);
 }
 </style>
