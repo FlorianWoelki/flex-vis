@@ -108,7 +108,8 @@ export default class Navbar extends Vue {
 
       i {
         &::after {
-          left: calc(100% - 25px);
+          background-color: #4d4d4d;
+          left: calc(100% - 22px);
         }
         &::before {
           color: #4d4d4d !important;
