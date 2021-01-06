@@ -1,7 +1,7 @@
 <template>
   <v-row level>
     <v-col c="5">
-      <div v-if="!differentSize" class="showcase">
+      <div v-if="!differentSize" class="showcase" :class="{ dark: darkMode }">
         <div
           class="showcase-wrapper"
           :style="{
@@ -17,7 +17,7 @@
           <div class="square" :style="styleForAlternateSquares">4</div>
         </div>
       </div>
-      <div v-else class="showcase different-sizes">
+      <div v-else class="showcase different-sizes" :class="{ dark: darkMode }">
         <div
           class="showcase-wrapper"
           :style="{
@@ -35,7 +35,9 @@
     <v-col c="5" o="2">
       <div class="u-flex u-flex-column">
         <div class="mb-4 width-slider u-flex u-flex-column">
-          <p class="mb-0 text-gray-700">Container width: {{ containerWidth }}%</p>
+          <p
+            :class="`mb-0 ${darkMode ? 'text-gray-600' : 'text-gray-700'}`"
+          >Container width: {{ containerWidth }}%</p>
           <input v-model="containerWidth" type="range" min="1" max="100">
         </div>
         <div>
@@ -54,7 +56,7 @@
               {{option}}
             </v-dropdown-item>
           </v-dropdown>
-          <p class="text-gray-700">
+          <p :class="darkMode ? 'text-gray-600' : 'text-gray-700'">
             Default: <kbd>{{ defaultFlexValue }}</kbd>
             <slot name="additionalInformation"></slot>
           </p>
@@ -173,6 +175,11 @@ export default class Visualizer extends Vue {
   background-color: #ddd;
   height: 350px;
   padding: 1rem;
+
+  &.dark {
+    border-color: #111;
+    background-color: #000;
+  }
 
   .showcase-wrapper {
     display: flex;
