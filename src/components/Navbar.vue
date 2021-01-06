@@ -20,16 +20,16 @@
         </v-nav-dropdown-item>
       </v-nav-dropdown>
     </v-nav-region>
-    <!--<v-nav-region position="right">
+    <v-nav-region position="right">
       <div class="custom-nav-item">
         <v-toggle
-          id="dark-mode-checkbox"
-          dataCheckIcon="DARK"
-          dataUncheckIcon="LIGHT"
+          style="text-align: initial; padding-left: 0"
+          dataCheckIcon="🌑"
+          dataUncheckIcon="🌕"
           @change="toggleDarkMode()"
         ></v-toggle>
       </div>
-    </v-nav-region>-->
+    </v-nav-region>
   </v-navbar>
 </template>
 
@@ -92,11 +92,6 @@ export default class Navbar extends Vue {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  #dark-mode-checkbox {
-    text-align: initial;
-    padding-left: 0;
   }
 
   .form-ext-toggle {
