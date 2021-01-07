@@ -90,8 +90,14 @@ export default class Navbar extends Vue {
 .header {
   .custom-nav-item {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    margin-left: 1em;
+
+    @media (min-width: 769px) {
+      justify-content: center;
+      margin-left: 0;
+    }
   }
 
   .form-ext-toggle {
