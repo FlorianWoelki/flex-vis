@@ -5,7 +5,7 @@
     </v-container>
     <v-space xlarge></v-space>
 
-    <v-container >
+    <v-container>
       <v-row>
         <v-col class="u-center" c="4">
           <WhyFlexboxBox title="Better lay out" icon="ruler">
@@ -37,3 +37,13 @@ export default Vue.extend({
   },
 });
 </script>
+
+<style lang="scss" scoped>
+.content .row .col-4 {
+  margin-top: 1em;
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
+}
+</style>
