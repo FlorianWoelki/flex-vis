@@ -24,16 +24,30 @@ There are multiple pages available:
 
 
 ## 📈 Getting Started
-*Coming Soon*
+Follow these steps, if you want to install the project on your machine:
+
+1. Clone project
+```shell
+git clone https://github.com/FlorianWoelki/flex-vis.git
+```
+2. Install dependencies with `yarn` or `npm`
+```shell
+npm install
+# OR
+yarn
+```
+3. Start the project
+```shell
+npm run serve
+# OR
+yarn serve
+```
 
 
 ## 🛠 Built with
 - [vue.js](https://vuejs.org/)
 - [vue-cirrus](https://florianwoelki.github.io/vue-cirrus/#/)
 - [vuex](https://vuex.vuejs.org/)
-
-## 🤝 Contributing
-*Coming Soon*
 
 
 ## 🤠 Authors
