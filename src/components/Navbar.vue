@@ -1,5 +1,5 @@
 <template>
-  <v-navbar ref="navbar" clear fixed :dark="darkMode">
+  <v-navbar ref="navbar" :clear="!isMobileDevice()" fixed :dark="darkMode">
     <template #brandTitle>
       <router-link to="/">
         <h6>Flexbox Visualizer</h6>
@@ -45,19 +45,25 @@ export default class Navbar extends Vue {
   ];
 
   mounted() {
-    const navbarElement = (this.$refs.navbar as any).$el as HTMLElement;
-    /* eslint-disable-next-line */
-    window.addEventListener('scroll', function (_) {
-      const scroll = this.scrollY;
+    if (!this.isMobileDevice()) {
+      const navbarElement = (this.$refs.navbar as any).$el as HTMLElement;
+      /* eslint-disable-next-line */
+      window.addEventListener('scroll', function (_) {
+        const scroll = this.scrollY;
 
-      if (navbarElement !== null) {
-        if (scroll >= 50) {
-          navbarElement.classList.remove('header-clear');
-        } else {
-          navbarElement.classList.add('header-clear');
+        if (navbarElement !== null) {
+          if (scroll >= 50) {
+            navbarElement.classList.remove('header-clear');
+          } else {
+            navbarElement.classList.add('header-clear');
+          }
         }
-      }
-    });
+      });
+    }
+  }
+
+  private isMobileDevice(): boolean {
+    return window.innerWidth <= 769;
   }
 
   private get darkMode(): boolean {
